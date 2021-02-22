@@ -7,18 +7,29 @@
 </head>
 <body>
     <main>
-        <nav>
-            <p><a href="https://www.tlu.ee">Tallinna Ülikool</a></p>
-            <p><a href="#intro">Veebis saab kasutada</a></p>
-            <p><a href="#gaudeamus">Üliõpilashümn <q>Gaudeamus</q></a></p>
-            <p><a href="#media">Meedia veebis</a></p>
-            <p><a href="#animation">Animatsioon</a></p>
-        </nav>
+        <div id="header_container">
+            <div id="navbar">
+                <nav>
+                    <p><a href="https://www.tlu.ee">Tallinna Ülikool</a></p>
+                    <p><a href="#intro">Veebis saab kasutada</a></p>
+                    <p><a href="#gaudeamus">Üliõpilashümn <q>Gaudeamus</q></a></p>
+                    <p><a href="#media">Meedia veebis</a></p>
+                    <p><a href="#animation">Animatsioon</a></p>
+                </nav>
+            </div>
+            <div id="header_img">
+                <img src="../img/oliver_text_white.png" alt="Minunimeline tekst" id="oliver_text_wallpaper">
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
         <header>
             <h1>Veebi- ja meediaelemendid</h1>
-            <p>See veebileht on loodud õppetöö raames ja ei sisalda mõistlikku sisu!</p>
+            <p id="intro_p">See veebileht on loodud õppetöö raames ja ei sisalda mõistlikku sisu!</p>
         </header>
         <section id="intro">
+            <hr>
             <h2>Veebis saab kasutada</h2>
             <ol>
                 <li>Teksti
@@ -36,21 +47,31 @@
                 <dt>List</dt><dd>Loend, loendina järjestatud andmete kogum.</dd>
                 <dt>Tekst</dt><dd>Kirjutatud või trükitud sõnade mõtestatud järjend.</dd>
             </dl>
+            <hr>
         </section>
         <section id="hobbies">
+            <hr>
             <h2>Minu hobid</h2>
             <p>Minu peamisteks hobideks on <b>muusika</b>, <b>arvutimängud</b> ning <b>pildi- ja videotöötlus</b>.</p> <br>
-            <p>Muusikalise "hobiga" olen ma tegelenud juba üle 12 aasta. Olen lõpetanud Rapla Muusikakooli löökpillide erialal. Viimastel aastatel on aga huvitama hakanud produtseerimise ning räpimuusika pool.</p>
-            <p>Arvutimängud ning üldse <i>gaming</i> on olnud minu kirg praktiliselt kogu elu. Selle hobi sain ma külge oma onu kaudu, kes mind <i>PlayStation 2</i> maailma tutvustas. Praegusel hetkel on minu lemmikmängudeks <i>CS:GO</i>, <i>Rocket League</i> ning <i>NBA</i> seeria.</p>
-            <p>Pildi- ja videotöötlusega olen ma tegelenud ~ 8-9 aastat. Programmid, mida ma nende jaoks kasutan, on <i>Adobe Photoshop</i> ning <i>Sony Vegas</i>.</p> <br>
+            <p>Muusikalise "hobiga" olen ma tegelenud juba üle 12 aasta. Olen lõpetanud Rapla Muusikakooli löökpillide eriala (7 aastat) ning lisaks sellele võtsin ma ka 4 lisa-õppeaastat. Viimastel aastatel on aga huvitama hakanud produtseerimise ning räpimuusika pool.</p>
+            <p>Arvutimängud ning üldse <i>gaming</i> on olnud minu kirg praktiliselt kogu elu. Selle hobi sain ma külge oma onu kaudu, kes mind <i>PlayStation 2</i> maailma tutvustas. Praegusel hetkel on minu lemmikmängudeks <i>CS:GO</i>, <i>Rocket League</i> ning <i>NBA</i> korvpalli mänguseeria.</p>
+            <p>Pildi- ja videotöötlusega olen ma tegelenud ~ 8-9 aastat. Programmid, mida ma nende jaoks kasutan, on peamiselt <i>Adobe Photoshop</i> ning <i>Sony Vegas</i>.</p> <br>
             <figure>
                 <img src="../img/setup.jpg" alt="Minu setup">
                 <figcaption>Minu <i>setup</i> (2016. aasta pilt)</figcaption>
             </figure>
+            <h3>Minu varasem looming</h3>
+            <p>Rapla Ühisgümnaasiumi 2017. aasta <i>moeshow</i> tarbeks loodud reklaamvideo:</p>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/OYoqso8_3tA" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <p>Minu loodud Rapla Ühisgümnaasiumi <i>moeshow</i> reklaamvideo</p>
+            <p>Loodud räpimuusika instrumentaalversiooni näide:</p>
+            <audio controls preload="none">
+                <source src="../mpeg/instrumentaal.mp3" type="audio/mpeg">
+                Vabandage, kahjuks Teie brauser ei toeta HTML5 audio elementi!
+            </audio>
+            <hr>
         </section>
         <section id="gaudeamus">
+            <hr>
             <h2>Gaudeamus</h2>
             <p>Keskaegne tekst, Christian Wilhelm Kindleben (töötlus) / üliõpilaslaul</p>
             <pre>:,: Gaudeamus igitur
@@ -94,8 +115,10 @@ pereant osores! :,:
 Pereat diabolus,
 quivis antiburschius,
 :,: atque irrisores! :,:</pre>
+        <hr>
         </section>
         <section id="media">
+            <hr>
             <h2>Meedia elemendid veebis</h2>
             <p>Veebis saab kasutada pea kõiki samasid meedia elemente, mida kasutame ka töölauarakendustes.</p>
             <h3>Pildid</h3>
@@ -127,16 +150,45 @@ quivis antiburschius,
                 Vabandage, kahjuks Teie brauser ei toeta HTML5 video elementi!
             </video>
             <h3>Youtube'i video</h3>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/lMbaZzeKJC8" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/MmB9b5njVbA" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <hr>
         </section>
         <section id="animation">
+            <hr>
             <h2>CSS abil saab objekte paigutada ja liigutada</h2>
             <div id="stage">
+                <img src="../../../~rinde/media/pictures/maastik/Brorfelde_landscape_2_taeva_osa_veerand.png" alt="Taevas" id="landscape_sky">
                 <div id="windmill">
                     <img src="../../../~rinde/media/pictures/tuuleveski/tuuleveski_korpus.png" alt="Tuuleveski korpus" id="wm_body">
                     <img src="../../../~rinde/media/pictures/tuuleveski/tuuleveski_tiivik.png" alt="Tuuleveski tiivik" id="wm_wing">
                 </div>
+                <div id="sun">
+                    <img src="../../../~rinde/media/pictures/kopter/paike.png" alt="Päike" id="sun_img">
+                </div>
+                <img src="../../../~rinde/media/pictures/maastik/Brorfelde_landscape_2_maa_osa_veerand.png" alt="Maastik" id="landscape_land">
+                <div id="truck">
+                    <img src="../../../~rinde/media/pictures/vana_veokas_01/old_truck_3_xmas.png" alt="Veokas" id="truck_body">
+                    <img src="../../../~rinde/media/pictures/vana_veokas_01/truck_wheel.png" alt="Veoauto vasak ratas" id="truck_left_wheel">
+                    <img src="../../../~rinde/media/pictures/vana_veokas_01/truck_wheel.png" alt="Veoauto parem ratas" id="truck_right_wheel">
+                </div>
+                <div id="chopper">
+                    <img src="../../../~rinde/media/pictures/kopter/kopterikere.png" alt="Kopteri kere" id="chopper_body">
+                    <img src="../../../~rinde/media/pictures/kopter/rootor.png" alt="Kopteri rootor" id="chopper_rotor">
+                    <img src="../../../~rinde/media/pictures/kopter/tagarootor.png" alt="Kopteri tagumine rootor" id="chopper_backrotor">
+                </div>
+                <div id="oldcar">
+                    <img src="../../../~rinde/media/pictures/vana_auto_01/car_body_2_red.png" alt="Vana auto kere" id="oldcar_body">
+                    <img src="../../../~rinde/media/pictures/vana_auto_01/car_wheel.png" alt="Vana auto vasak ratas" id="oldcar_left_wheel">
+                    <img src="../../../~rinde/media/pictures/vana_auto_01/car_wheel.png" alt="Vana auto parem ratas" id="oldcar_right_wheel">
+                </div>
+                <div id="pic_characters">
+                    <img src="../img/among_us_pink.png" alt="Tegelane" id="pic_character1">
+                    <img src="../img/among_us_red.png" alt="Tegelane" id="pic_character2">
+                    <img src="../img/among_us_green.png" alt="Tegelane" id="pic_character3">
+                </div>
+                <img src="../img/spaceship.png" alt="Kosmoselaev" id="pic_spaceship">
             </div>
+            <hr>
         </section>
         <footer>
             <p>Leht lõppeb siin!</p>
