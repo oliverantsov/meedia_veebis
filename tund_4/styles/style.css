@@ -74,7 +74,7 @@ nav {
     border-color: rgb(211, 211, 211);
 }
 
-#header_img {
+.header_img {
     flex: 1;
     margin-left: 15%;
     height: 0px;
@@ -86,7 +86,7 @@ nav {
     margin-right: 10px;
     transform-origin: 0px top; /*0% 0%     left top     0px 0px*/
                                 /*top center bottom     left center right     0 - 100%     px*/
-    transform: scale(1.5) translate(0px,0px) rotate(0deg) skew(0deg);
+    transform: scale(1) translate(0px,0px) rotate(0deg) skew(0deg);
     transition-property: transform; /*all     või komadega eraldades mitu omadust*/
     transition-duration: 2s;
     transition-delay: 2s;
@@ -94,11 +94,89 @@ nav {
     /*transition: transform 2s 2s ease-in-out*/
 }
 
-.tlu_logo:hover {
-    transform: scale(1);
+.animated_clock {
+    overflow: hidden;
 }
 
-#stage {
+.clockArea {
+    margin: auto;
+	width: 272px;
+    height: 473px;
+}
+
+.clock {
+	position: relative;
+	width: 554px;
+	height: 945px;
+	transform-origin: 0% 0%;
+    transform: scale(.5);
+}
+
+.clock * {
+	position: absolute;
+}
+
+.clockface {
+	width: 369px;
+	height: 369px;
+	left: 92px;
+	top: 90px;
+}
+
+.clockhand {
+	left: 158px;
+	top: 10px;
+	transform-origin: 50% 176px;
+}
+
+.clockhour {
+    animation: kellaseier 100s linear infinite;
+}
+
+.clockmin {
+    animation: kellaseier 50s linear infinite;
+}
+
+.clocksec {
+    animation: kellaseier 8s linear infinite;
+}
+
+.pendulus {
+	left: 194px;
+    top: 400px;
+    animation: pendulumswing 2s linear infinite;
+    animation-direction: alternate;
+    transform: scale(10);
+    top: 325px;
+}
+
+/*.tlu_logo:hover {
+    transform: scale(1.5);
+}*/
+
+.mysetup {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    transform: scale(.8);
+    margin-top: -50px;
+}
+
+.setupCaption {
+    text-align: center;
+    margin-top: -20px;
+}
+
+.moeshowArea {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.rapsongArea {
+    text-align: center;
+}
+
+.stage {
     width: 1188px;
     height: 600px;
     /*background-color: rgba(255, 255, 255, 0.1);*/
@@ -109,7 +187,7 @@ nav {
     overflow: hidden;
 }
 
-#stage * {
+.stage * {
     position: absolute;
 }
 
@@ -156,17 +234,17 @@ nav {
     left: 805px;
 }
 
-#chopper {
+.chopper {
     left: 550px;
     top: 30px;
     transform: scale(.4);
 }
 
-#chopper_rotor {
+.chopper_rotor {
     left: -36px;
 }
 
-#chopper_backrotor {
+.chopper_backrotor {
     left: 340px;
     top: 18px;
 }
@@ -177,40 +255,40 @@ nav {
     top: 130px;
 }
 
-#oldcar {
+.oldcar {
     bottom: 280px;
     right: 400px;
     transform: scale(.9);
 }
 
-#oldcar_left_wheel {
+.oldcar_left_wheel {
     top: 151px;
     left: 33px;
 }
 
-#oldcar_right_wheel {
+.oldcar_right_wheel {
     top: 151px;
     left: 355px;
 }
 
-#pic_character1 {
+.pic_character1 {
     transform: scale(.13);
     left: 100px;
 }
 
-#pic_character2 {
+.pic_character2 {
     transform: scale(.25);
     top: -55px;
     left: 300px;
 }
 
-#pic_character3 {
+.pic_character3 {
     transform: scale(.05);
     top: -185px;
     left: 670px;
 }
 
-#pic_spaceship {
+.pic_spaceship {
     transform: scale(0.15);
     top: -110px;
     left: 705px;
@@ -265,6 +343,16 @@ footer {
     position: fixed;
     bottom: 0px;
     left: 0px;
+}
+
+@keyframes kellaseier {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+
+@keyframes pendulumswing {
+    0%, 100% {transform: rotate(25deg);}
+    50% {transform: rotate(-25deg);}
 }
 
 @keyframes ruuduliikumine {

@@ -17,17 +17,20 @@
                     <p><a href="#animation">Animatsioon</a></p>
                 </nav>
             </div>
-            <div id="header_img">
+            <div id="header_img" class="header_img">
                 <img src="../img/oliver_text_white.png" alt="Minunimeline tekst" id="oliver_text_wallpaper">
             </div>
         </div>
         <br>
         <br>
         <br>
+
         <header>
             <h1>Veebi- ja meediaelemendid</h1>
             <p id="intro_p">See veebileht on loodud õppetöö raames ja ei sisalda mõistlikku sisu!</p>
         </header>
+
+
         <section id="tlu">
             <hr>
             <h2>TLÜ</h2>
@@ -45,7 +48,29 @@
             <p><strong>2012</strong> Valmisid Tallinna Ülikooli <a href="https://www.tlu.ee/ulikooli-linnak">Nova ja Astra hooned</a>.</p>
             <p><strong>2013 </strong>Uksed avab <a href="https://www.tlu.ee/hik">Haridusinnovatsiooni Keskus</a>.</p>
             <p><strong>2015 </strong>Alustavad reformijärgselt tööd kuus instituuti - <a href="https://www.tlu.ee/bfm">Balti filmi, meedia, kunstide ja kommunikatsiooni instituut</a>, <a href="https://www.tlu.ee/dt">digitehnoloogiate instituut</a>, <a href="https://www.tlu.ee/hti">haridusteaduste instituut</a>, <a href="https://www.tlu.ee/ht">humanitaarteaduste instituut</a>, <a href="https://www.tlu.ee/lti">loodus- ja terviseteaduste instituut</a> ning <a href="https://www.tlu.ee/yti">ühiskonnateaduste instituut</a>.</p>
+            <hr>
         </section>
+
+
+        <section id="animated_clock" class="animated_clock">
+            <hr>
+            <h2>Animeeritud kell</h2>
+            <div id="clockArea" class="clockArea">
+                <div id="clock" class="clock">
+                    <img src="../../../~rinde/media/pictures/kell/clock_box.png" alt="kellakast">
+                    <img src="../../../~rinde/media/pictures/kell/clock_pendulum.png" alt="kellapendel" id="pendulus" class="pendulus">
+                    <div id="clockface" class="clockface">
+                    <img src="../../../~rinde/media/pictures/kell/clock_face.png" alt="kella numbrilaud">
+                    <img src="../../../~rinde/media/pictures/kell/hour_hand.png" alt="kella tunniseier" id="hourhand" class="clockhand clockwork clockhour">
+                    <img src="../../../~rinde/media/pictures/kell/minute_hand.png" alt="kella minutiseier" id="minutehand" class="clockhand clockwork clockmin">
+                    <img src="../../../~rinde/media/pictures/kell/second_hand.png" alt="kella sekundiseier" id="secondhand" class="clockhand clockwork clocksec">
+                    </div>
+                </div>
+            </div>
+            <hr>
+        </section>
+
+
         <section id="intro">
             <hr>
             <h2>Veebis saab kasutada</h2>
@@ -67,27 +92,39 @@
             </dl>
             <hr>
         </section>
+
+
         <section id="hobbies">
             <hr>
             <h2>Minu hobid</h2>
-            <p>Minu peamisteks hobideks on <b>muusika</b>, <b>arvutimängud</b> ning <b>pildi- ja videotöötlus</b>.</p> <br>
+            <p>Minu peamisteks hobideks on <b>muusika</b>, <b>arvutimängud</b> ning <b>pildi- ja videotöötlus</b>.</p> 
             <p>Muusikalise "hobiga" olen ma tegelenud juba üle 12 aasta. Olen lõpetanud Rapla Muusikakooli löökpillide eriala (7 aastat) ning lisaks sellele võtsin ma ka 4 lisa-õppeaastat. Viimastel aastatel on aga huvitama hakanud produtseerimise ning räpimuusika pool.</p>
             <p>Arvutimängud ning üldse <i>gaming</i> on olnud minu kirg praktiliselt kogu elu. Selle hobi sain ma külge oma onu kaudu, kes mind <i>PlayStation 2</i> maailma tutvustas. Praegusel hetkel on minu lemmikmängudeks <i>CS:GO</i>, <i>Rocket League</i> ning <i>NBA</i> korvpalli mänguseeria.</p>
             <p>Pildi- ja videotöötlusega olen ma tegelenud ~ 8-9 aastat. Programmid, mida ma nende jaoks kasutan, on peamiselt <i>Adobe Photoshop</i> ning <i>Sony Vegas</i>.</p> <br>
             <figure>
-                <img src="../img/setup.jpg" alt="Minu setup">
-                <figcaption>Minu <i>setup</i> (2016. aasta pilt)</figcaption>
+                <img src="../img/setup.jpg" alt="Minu setup" id="mysetup" class="mysetup">
+                <figcaption id="setupCaption" class="setupCaption">Minu <i>setup</i> (2016. aasta pilt)</figcaption>
             </figure>
-            <h3>Minu varasem looming</h3>
-            <p>Rapla Ühisgümnaasiumi 2017. aasta <i>moeshow</i> tarbeks loodud reklaamvideo:</p>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/OYoqso8_3tA" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <p>Loodud räpimuusika instrumentaalversiooni näide:</p>
+            <br>
+            <br>
+            <h3 style="text-align: center;">Minu varasem looming</h3>
+            <div id="moeshowArea" class="moeshowArea">
+                <p>Rapla Ühisgümnaasiumi 2017. aasta <i>moeshow</i> tarbeks loodud reklaamvideo:</p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/OYoqso8_3tA" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <br>
+            <br>
+            <div id="rapsongArea" class="rapsongArea">
+                <p>Loodud räpimuusika instrumentaalversiooni näide:</p>
             <audio controls preload="none">
                 <source src="../mpeg/instrumentaal.mp3" type="audio/mpeg">
                 Vabandage, kahjuks Teie brauser ei toeta HTML5 audio elementi!
             </audio>
+            </div>
             <hr>
         </section>
+
+
         <section id="gaudeamus">
             <hr>
             <h2>Gaudeamus</h2>
@@ -135,6 +172,8 @@ quivis antiburschius,
 :,: atque irrisores! :,:</pre>
         <hr>
         </section>
+
+
         <section id="media">
             <hr>
             <h2>Meedia elemendid veebis</h2>
@@ -171,11 +210,13 @@ quivis antiburschius,
             <iframe width="560" height="315" src="https://www.youtube.com/embed/MmB9b5njVbA" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <hr>
         </section>
+
+
         <section id="animation">
             <hr>
             <h2>CSS abil saab objekte paigutada ja liigutada</h2>
             <div id="stage" class="stage">
-                <img src="../../../~rinde/media/pictures/maastik/Brorfelde_landscape_2_taeva_osa_veerand.png" alt="Taevas" id="landscape_sky">
+                <img src="../../../~rinde/media/pictures/maastik/Brorfelde_landscape_2_taeva_osa_veerand.png" alt="Taevas" id="landscape_sky" class="landscape_sky">
                 <div id="windmill" class="windmill">
                     <img src="../../../~rinde/media/pictures/tuuleveski/tuuleveski_korpus.png" alt="Tuuleveski korpus" id="wm_body" class="wm_body">
                     <img src="../../../~rinde/media/pictures/tuuleveski/tuuleveski_tiivik.png" alt="Tuuleveski tiivik" id="wm_wing" class="wm_wing">
@@ -195,31 +236,34 @@ quivis antiburschius,
                         <img src="../../../~rinde/media/pictures/vana_veokas_01/truck_wheel.png" alt="Veoauto parem ratas" id="truck_right_wheel" class="truck_wheel truck_right_wheel">
                     </div>
                 </div>
-                <div id="chopper">
-                    <img src="../../../~rinde/media/pictures/kopter/kopterikere.png" alt="Kopteri kere" id="chopper_body">
-                    <img src="../../../~rinde/media/pictures/kopter/rootor.png" alt="Kopteri rootor" id="chopper_rotor">
-                    <img src="../../../~rinde/media/pictures/kopter/tagarootor.png" alt="Kopteri tagumine rootor" id="chopper_backrotor">
+                <div id="chopper" class="chopper">
+                    <img src="../../../~rinde/media/pictures/kopter/kopterikere.png" alt="Kopteri kere" id="chopper_body" class="chopper_body">
+                    <img src="../../../~rinde/media/pictures/kopter/rootor.png" alt="Kopteri rootor" id="chopper_rotor" class="chopper_rotor">
+                    <img src="../../../~rinde/media/pictures/kopter/tagarootor.png" alt="Kopteri tagumine rootor" id="chopper_backrotor" class="chopper_backrotor">
                 </div>
-                <div id="oldcar">
+                <div id="oldcar" class="oldcar">
                     <img src="../../../~rinde/media/pictures/vana_auto_01/car_body_2_red.png" alt="Vana auto kere" id="oldcar_body">
-                    <img src="../../../~rinde/media/pictures/vana_auto_01/car_wheel.png" alt="Vana auto vasak ratas" id="oldcar_left_wheel">
-                    <img src="../../../~rinde/media/pictures/vana_auto_01/car_wheel.png" alt="Vana auto parem ratas" id="oldcar_right_wheel">
+                    <img src="../../../~rinde/media/pictures/vana_auto_01/car_wheel.png" alt="Vana auto vasak ratas" id="oldcar_left_wheel" class="oldcar_left_wheel">
+                    <img src="../../../~rinde/media/pictures/vana_auto_01/car_wheel.png" alt="Vana auto parem ratas" id="oldcar_right_wheel" class="oldcar_right_wheel">
                 </div>
-                <div id="pic_characters">
-                    <img src="../img/among_us_pink.png" alt="Tegelane" id="pic_character1">
-                    <img src="../img/among_us_red.png" alt="Tegelane" id="pic_character2">
-                    <img src="../img/among_us_green.png" alt="Tegelane" id="pic_character3">
+                <div id="pic_characters" class="pic_characters">
+                    <img src="../img/among_us_pink.png" alt="Tegelane" id="pic_character1" class="pic_character1">
+                    <img src="../img/among_us_red.png" alt="Tegelane" id="pic_character2" class="pic_character2">
+                    <img src="../img/among_us_green.png" alt="Tegelane" id="pic_character3" class="pic_character3">
                 </div>
-                <img src="../img/spaceship.png" alt="Kosmoselaev" id="pic_spaceship">
+                <img src="../img/spaceship.png" alt="Kosmoselaev" id="pic_spaceship" class="pic_spaceship">
                 <div class="ruut">
-
                 </div>
             </div>
             <hr>
         </section>
+
+
         <footer>
             <p>Leht lõppeb siin!</p>
         </footer>
+
+
     </main>
 </body>
 </html>
