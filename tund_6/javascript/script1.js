@@ -120,12 +120,41 @@ function animInfo(e) {
             e.target.style.animationDelay = animdelay + "s";
             e.target.style.animationDuration = animduration + "s";
             if(e.animationName == "drive"){
-
                 e.target.style.animationName = "driveback";
-                
             } else {
                 e.target.style.animationName = "drive";
             }
+            console.log("peale truckareat");
+        }
+        if(e.target.id == "pic_spaceship"){
+            let animdelay = 1.5;
+            let animduration = 3 + Math.round(Math.random() * 1.3);
+            e.target.style.animationDuration = animduration + "s";
+            e.target.style.animationDelay = animdelay + "s";
+            e.target.style.animationName = "spaceship";
+            console.log("peale spaceshipi");
+        }
+        if(e.target.id == "wm_wing"){
+            let animdelay = 1;
+            let animduration = 5 + Math.round(Math.random() * 5);
+            e.target.style.animationDuration = animduration + "s";
+            e.target.style.animationDelay = animdelay + "s";
+            e.target.style.animationName = "spin";
+            console.log("peale tuuleveskit");
+        }
+        if(e.target.id == "chopper_backrotor"){
+            let animdelay = 1;
+            let animduration = .0000002 + (Math.random() * 3);
+            e.target.style.animationDuration = animduration + "s";
+            e.target.style.animationDelay = animdelay + "s";
+            e.target.style.animationName = "spin";
+        }
+        if(e.target.id == "sun_img"){
+            let animdelay = 1;
+            let animduration = 8 + Math.round(Math.random() * 5);
+            e.target.style.animationDuration = animduration + "s";
+            e.target.style.animationDelay = animdelay + "s";
+            e.target.style.animationName = "spin";
         }
     }
 }

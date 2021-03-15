@@ -228,7 +228,7 @@ nav {
 }
 
 .wm_wing {
-    animation: spin 5s linear infinite reverse;
+    animation: spin 5s linear infinite reverse paused;
 }
 
 .truckarea {
@@ -270,15 +270,17 @@ nav {
 .chopper_backrotor {
     left: 340px;
     top: 18px;
+    animation: spin .0000002s linear infinite paused;
 }
 
 .sun_img {
     transform: scale(1.2);
     left: 50px;
     top: 130px;
+    animation: spin 5s linear infinite paused;
 }
 
-.oldcar {
+/*.oldcar {
     bottom: 280px;
     right: 400px;
     transform: scale(.9);
@@ -292,7 +294,7 @@ nav {
 .oldcar_right_wheel {
     top: 151px;
     left: 355px;
-}
+}*/
 
 .pic_character1 {
     transform: scale(.13);
@@ -312,9 +314,11 @@ nav {
 }
 
 .pic_spaceship {
-    transform: scale(0.15);
     top: -110px;
     left: 705px;
+    animation: spaceship 6s ease-in-out infinite;
+    animation-direction: alternate;
+    animation-play-state: paused;
 }
 
 .ruut {
@@ -407,4 +411,9 @@ footer {
 @keyframes driveback {
     0% {transform: translate(1250px, 300px) scale(-1, 1);}
     100% {transform: translate(-560px, 300px) scale(-1, 1);}
+}
+
+@keyframes spaceship {
+    0% {transform: translate(0px, -200px)}
+    100% {transform: translate(0px, -40px)}
 }
