@@ -3,10 +3,12 @@ let clock_speaker = new Audio();
 let time_words = [];
 let bell = new Audio();
 let prev_hour;
+var i;
+let alarm_sound = new Audio();
+
 
 function init_clock() {
     document.getElementById("clock_speak_btn").addEventListener("click", tell_time);
-    bell.src = sound_url + "kell.mp3";
     prev_hour = new Date().getHours();
     clockTick();
 }
@@ -22,13 +24,64 @@ function clockTick() {
     document.getElementById("secondhand").style.transform = "rotate(" + secAngle + "deg)";
     document.getElementById("minutehand").style.transform = "rotate(" + minAngle + "deg)";
     document.getElementById("hourhand").style.transform = "rotate(" + hourAngle + "deg)";
-    //kas lüüa kella?
-    //kavalam on kontrollida, kas document.getElementById("allow_bell_btn").checked ja tundide arv erineb eelmise tsükli tundidest
-    //ehk currentHour != prev_hour
-    //if(currentMinute == 0 && currentSecond == 0 && currentTime.getMilliseconds() < 1000/60 && document.getElementById("allow_bell_btn").checked){}
-        //loendur, mitu korda vaja lüüa
-    // setTimeout(1000,clockTick);
+    /*kas lüüa kella?
+    kavalam on kontrollida, kas document.getElementById("allow_bell_btn").checked ja tundide arv erineb eelmise tsükli tundidest
+    ehk currentHour != prev_hour
+    if(currentMinute == 0 && currentSecond == 0 && currentTime.getMilliseconds() < 1000/60 && document.getElementById("allow_bell_btn").checked){}
+        loendur, mitu korda vaja lüüa
+    setTimeout(1000,clockTick);*/
+    hourly_bell();
     requestAnimationFrame(clockTick);
+}
+
+/*function bell_preparation() {
+    let currentTime = new Date();
+    let currentHour = currentTime.getHours();
+    let currentMinute = currentTime.getMinutes();
+    let currentSecond = currentTime.getSeconds();
+    let bell_counter;
+    if(currentMinute == 0 && currentSecond == 0 && currentTime.getMilliseconds() < 1000/60 && document.getElementById("allow_bell_btn").checked){
+        if(currentHour > 12){
+            regularHour = currentHour - 12;
+            bell_counter = regularHour;
+        } else {
+            bell_counter = currentHour;
+        }
+        for (i = 0; i <= bell_counter; i++){
+            bell.addEventListener("ended", hourly_bell);
+        } 
+    }
+    if(currentSecond == 0 && document.getElementById("allow_bell_btn").checked){
+        console.log("Töötab!");
+        bell.addEventListener("ended", hourly_bell);
+        hourly_bell();
+    }
+}*/
+
+function hourly_bell() {
+    let currentTime = new Date();
+    let currentHour = currentTime.getHours();
+    let currentMinute = currentTime.getMinutes();
+    let currentSecond = currentTime.getSeconds();
+    let bell_counter;
+    bell.src = sound_url + "kell.mp3";
+    if(currentMinute == 0 && currentSecond == 0 && currentTime.getMilliseconds() < 1000/60 && document.getElementById("allow_bell_btn").checked){
+        if(currentHour > 12){
+            regularHour = currentHour - 12;
+            bell_counter = regularHour;
+        } else {
+            bell_counter = currentHour;
+        }
+        for (i = 0; i <= bell_counter; i++){
+            bell.play();
+            //bell.removeEventListener("ended", hourly_bell);
+        } 
+    }
+    if(currentSecond == 30 && document.getElementById("allow_bell_btn").checked){
+        console.log("Töötab!");
+        bell.play();
+        //bell.addEventListener("ended", hourly_bell);
+    }
 }
 
 function tell_time() {
@@ -80,3 +133,32 @@ function num_to_words(num_value) {
     }
     
 }
+
+setInterval(function alarm_clock() {
+    let currentTime = new Date();
+    let currentHour = currentTime.getHours();
+    let currentMinute = currentTime.getMinutes();
+    alarm_sound.src = "../mp3/SamsungWhistle.mp3";
+    alarm_sound.volume = 0.5;
+    alarm_sound.loop = true;
+    var alarmHour = document.getElementById("alarm_hour_btn").value;
+    var alarmMinute = document.getElementById("alarm_minute_btn").value;
+    if (alarmHour <= 9){
+        alarmHour = "0" + alarmHour;
+    }
+    if (alarmMinute <= 9){
+        alarmMinute = "0" + alarmHour;
+    }
+    if (alarmHour == currentHour && alarmMinute == currentMinute && document.getElementById("alarm_set").checked == true){
+        alarm_sound.play();
+    }
+},2000);
+
+function alarm_clock_stop() {
+    alarm_sound.src = "../mp3/SamsungWhistle.mp3";
+    alarm_sound.loop = true;
+    if (document.getElementById("alarm_set").checked == false){
+        alarm_sound.pause();
+    }
+}
+
