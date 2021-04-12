@@ -1,15 +1,98 @@
 let canvas;
 let ctx;
+let canvas_height = 540;
+let canvas_width = 960;
 
 function init_draw() {
     canvas = document.getElementById("canvas");
     ctx = canvas.getContext("2d");
-    draw_rect();
+    ctx.fillStyle = "#87ceff";
+    ctx.fillRect(0, 0, canvas_width, canvas_height);
+    //-----------------
+    /*draw_rect();
     draw_circle();
     draw_line();
-    draw_pacman();
+    draw_pacman();*/
+    //-----------------
+    draw_grass();
+    draw_sun();
+    draw_house();
+    draw_trees();
 }
 
+function draw_grass() {
+    ctx.strokeStyle = "green";
+    ctx.fillStyle = "green";
+    ctx.lineWidth = 4;
+    ctx.beginPath();
+        for (let i = 0; i < canvas_width; i = i+25) {
+            ctx.moveTo(i, 540);
+            ctx.bezierCurveTo(0, 390, 25, 390, 25, 540);
+            ctx.stroke();
+            ctx.fill();
+        }
+        //ctx.moveTo(0, 540);
+        
+    ctx.closePath();
+    ctx.stroke();
+}
+
+function draw_sun() {
+    ctx.strokeStyle = "yellow";
+    ctx.fillStyle = "yellow";
+    ctx.lineWidth = 4;
+    ctx.beginPath();
+        ctx.arc(40, 40, 25, 0, 2 * Math.PI);
+        ctx.moveTo(40, 80);
+        ctx.lineTo(40, 140);
+        ctx.moveTo(65, 70);
+        ctx.lineTo(110, 125);
+        ctx.moveTo(80, 35);
+        ctx.lineTo(200, 35);
+        ctx.moveTo(70, 5);
+        ctx.lineTo(80, 0);
+        ctx.stroke();
+        ctx.fill();
+    ctx.closePath();
+}
+
+function draw_house() {
+    ctx.strokeStyle = "red";
+    ctx.fillStyle = "red";
+    ctx.lineWidth = 4;
+    ctx.beginPath();
+        //ctx.rect(10, 300, 60, 40);
+        ctx.fillRect(10, 355, 130, 70);
+        ctx.fillRect(122, 325, 18, 30);
+        ctx.fillStyle = "white";
+        ctx.fillRect(20, 365, 25, 50);
+        ctx.fillRect(95, 365, 25, 50);
+        //ctx.moveTo(138, 355);
+        //ctx.lineTo(140, 325);
+        //ctx.stroke();
+    ctx.closePath();
+}
+
+function draw_trees() {
+    ctx.strokeStyle = "brown";
+    ctx.fillStyle = "brown";
+    ctx.lineWidth = 6;
+    ctx.beginPath();
+        ctx.fillRect(320, 300, 10, 150);
+        ctx.fillRect(880, 330, 10, 200);
+        ctx.fillStyle = "green";
+        ctx.arc(325, 275, 45, 0, 2 * Math.PI);
+        ctx.arc(885, 330, 60, 0, 2 * Math.PI);
+        ctx.fill();
+    ctx.closePath();
+}
+
+
+
+
+//-----------------------------------------------------------------------------------------------------
+// TUNNITÖÖ ASJAD
+//-----------------------------------------------------------------------------------------------------
 function draw_pacman() {
     ctx.beginPath();
         ctx.arc(800, 110, 100, .1 * Math.PI, 1.9 * Math.PI);
