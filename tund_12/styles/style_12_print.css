@@ -1,0 +1,119 @@
+body {
+    margin: 3cm;
+    color: black;
+    font-family: "Times New Roman", serif;
+    font-size: 16pt;
+}
+
+nav, video, audio {
+    display: none;
+}
+
+.stage {
+    width: 1188px;
+    height: 600px;
+    /*background-color: rgba(255, 255, 255, 0.1);*/
+    position: relative;/*static   relative   absolute   fixed*/
+    left: 0px;/*right*/
+    top: 0px;/*bottom*/
+    margin-bottom: 50px;
+    overflow: hidden;
+}
+
+.stage *, .photoplace * {
+    position: absolute;
+}
+
+.windmill {
+    width: 308px;
+    height: 350px;
+    /*border: 1px solid black;*/
+    left: 700px;
+    bottom: 270px;
+    transform: scale(.5);
+}
+
+.wm_body {
+    bottom: 0px;
+}
+
+.wm_wing {
+}
+
+.truckarea {
+    width: 250px;
+    height: 100px;
+}
+
+.truck {
+    top: 0px;
+    /*bottom: 320px;*/
+    transform: scale(.3);
+    transform-origin: left top;
+}
+
+.truck_wheel {
+    top: 325px;
+}
+
+.truck_left_wheel {
+    left: 85px;
+}
+
+.truck_right_wheel {
+    left: 805px;
+}
+
+.chopper {
+    left: 550px;
+    top: 30px;
+    transform: scale(.4);
+}
+
+.chopper_rotor {
+    left: -36px;
+}
+
+.chopper_backrotor {
+    left: 340px;
+    top: 18px;
+}
+
+.sun_img {
+    transform: scale(1.2);
+    left: 50px;
+    top: 130px;
+}
+
+.pic_character1 {
+    transform: scale(.13);
+    left: 100px;
+}
+
+.pic_character2 {
+    transform: scale(.25);
+    top: -55px;
+    left: 300px;
+}
+
+.pic_character3 {
+    transform: scale(.05);
+    top: -185px;
+    left: 670px;
+}
+
+.pic_spaceship {
+    top: -110px;
+    left: 705px;
+}
+
+.ruut {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+}
+
+.smoke {
+    top: 355px;
+    left: 78px;
+}
